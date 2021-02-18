@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=W0613, C0116
 # type: ignore[union-attr]
-# This program is dedicated to the public domain under the CC0 license.
 
 import logging
 import numpy as np
@@ -11,7 +10,6 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 import os
 import boto3
 import botocore
-
 import datetime
 import time
 import pytz
