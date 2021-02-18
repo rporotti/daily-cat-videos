@@ -19,7 +19,11 @@ Try me at [t.me/daily-cat-videos](https://t.me/dailycatvideosbot).
 
 First, you have to create a bot through [t.me/BotFather](https://t.me/BotFather)
 
-![BotFather](images/botfather.png)
+<kbd>
+  <img src="images/botfather.png">
+</kbd>
+
+
 
 Save the TELEGRAM_TOKEN somewhere.
 
@@ -87,7 +91,9 @@ Why do we need AWS after all? Well, every time that the bot gets reset, we compl
 
 First, you need to create a free account on AWS. Then, generate an API key [here](https://console.aws.amazon.com/iam/home?region=eu-central-1#/security_credentials)
 
-![AWS Key](images/AWS_bucket.png)
+<kbd>
+  <img src="images/AWS_bucket.png">
+</kbd>
 
 Then, [create a bucket](https://s3.console.aws.amazon.com/s3/bucket/create?region=eu-central-1).
 
@@ -119,17 +125,23 @@ git push heroku main
 
 If we want to sync the GitHub repo with the Heroku one, we can use a GitHub Action. You can find an example in `.github/workflows/heroku_deploy.yml`. The only piece that we miss is an API key from Heroku. This can be obtained [here](https://dashboard.heroku.com/account)
 
-![Heroku API](images/heroku.png)
+<kbd>
+  <img src="images/heroku.png">
+</kbd>
 
 save your HEROKU_API_KEY. 
 
 Now we have to add every secret key to the GitHub repo secret. In order to do so, go to [](https://github.com/{USERNAME}/{REPO}/settings/secrets/actions) and define a new secret:
 
-![New secret](images/secret.png)
+<kbd>
+  <img src="images/secret.png">
+</kbd>
 
 In the end, you will have something like this:
 
-![New secret](images/secrets.png)
+<kbd>
+  <img src="images/secrets.png">
+</kbd>
 
 * `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`: your AWS API keys 
 * `HEROKU_API_KEY`: your Heroku API key
