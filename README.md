@@ -28,7 +28,7 @@ Now, running
 ```
 TOKEN=TELEGRAM_TOKEN python bot_simple.py
 ```
-will run your bot on your local machine, and everything it's already working! Users preferences will get saved in $subscribed_users.txt$ and the videos will be taken from  $videos.txt$
+will run your bot on your local machine, and everything it's already working! Users preferences will get saved in ` subscribed_users.txt`  and the videos will be taken from  ` videos.txt` 
 
 We would like to deploy our bot on a server, so we don't have to have a running job on our local machine.
 
@@ -48,21 +48,21 @@ Then you just need to create an heroku app with:
 
 ```heroku create APP_NAME ```
 
-where $HEROKU_APP$ will be the name of your app. In case you already have an app name, you can just run
+where ` HEROKU_APP`  will be the name of your app. In case you already have an app name, you can just run
 
 ```heroku git:remote -a APP_NAME ```
 
 The generate URL will be something like https://example.herokuapp.com.
 
-Now setup what the Heroku app should do and put it in $Procfile$. This can be done with:
+Now setup what the Heroku app should do and put it in ` Procfile` . This can be done with:
 
 ```echo "web: python3 bot.py" > Procfile ```
 
-Create the $requirements.txt$ file needed for heroku with:
+Create the ` requirements.txt`  file needed for heroku with:
 
 ```pipreqs . ```
 
-($pip freeze > requirements.txt$ can be also used, but it tends to be cluttered with unwanted packages)
+(` pip freeze > requirements.txt`  can be also used, but it tends to be cluttered with unwanted packages)
 
 The last thing to do before committing is to tell Heroku our secret variables (telegram token, app name and so on), since our nice bot could end up on git and we don't want that this information will be public! This can be achieved with
 
@@ -91,13 +91,13 @@ First, you need to create a free account on AWS. Then, generate an API key [here
 
 Then, [create a bucket](https://s3.console.aws.amazon.com/s3/bucket/create?region=eu-central-1).
 
-This will be the container of any file that your bot needs. Upload an empty $subscribed_users.txt$ file to your bucket.
+This will be the container of any file that your bot needs. Upload an empty ` subscribed_users.txt`  file to your bucket.
 
-We are almost done! Now we just need to tell Heroku to store our $subscribed_users.txt$ to our bucket.
+We are almost done! Now we just need to tell Heroku to store our ` subscribed_users.txt`  to our bucket.
 
 ```heroku config:set AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY WITH_AWS=1 S3_BUCKET_NAME=S3_BUCKET_NAME ```
 
-where $AWS_ACCESS_KEY_ID$ and $AWS_SECRET_ACCESS_KEY$ are the keys that you have just obtained and $S3_BUCKET_NAME$ is your bucket name.
+where `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are the keys that you have just obtained and `S3_BUCKET_NAME` is your bucket name.
 
 Enjoy your completely cloud-based Telegram bot!
 
@@ -117,7 +117,7 @@ and then we would push on Heroku with:
 git push heroku main
 ```
 
-If we want to sync the GitHub repo with the Heroku one, we can use a GitHub Action. You can find an example in $.github/workflows/heroku_deploy.yml$. The only piece that we miss is an API key from Heroku. This can be obtained [here](https://dashboard.heroku.com/account)
+If we want to sync the GitHub repo with the Heroku one, we can use a GitHub Action. You can find an example in `.github/workflows/heroku_deploy.yml`. The only piece that we miss is an API key from Heroku. This can be obtained [here](https://dashboard.heroku.com/account)
 
 ![Heroku API](images/heroku.png)
 
