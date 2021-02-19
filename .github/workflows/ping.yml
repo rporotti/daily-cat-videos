@@ -8,8 +8,5 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: mikeesto/heroku-awake@1.0.0
-        with:
-          URL: ${{secrets.HEROKU_LINK}}
+      sh -c "curl --silent --show-error --fail ${{secrets.HEROKU_LINK}}" 
