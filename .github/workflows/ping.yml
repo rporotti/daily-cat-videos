@@ -8,5 +8,5 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    run:
       sh -c "curl --silent ${{secrets.HEROKU_LINK}}" 
