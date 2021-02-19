@@ -2,7 +2,7 @@ name: Heroku Awake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "50 8 * * *"
   workflow_dispatch:
       
 jobs:
