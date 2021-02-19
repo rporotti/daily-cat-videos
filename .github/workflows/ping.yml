@@ -9,4 +9,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      sh -c "curl --silent --show-error --fail ${{secrets.HEROKU_LINK}}" 
+      sh -c "curl --silent ${{secrets.HEROKU_LINK}}" 
