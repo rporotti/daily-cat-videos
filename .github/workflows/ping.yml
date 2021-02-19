@@ -7,7 +7,7 @@ on:
       
 jobs:
     run:
-        name: Lint
+        name: Ping
         runs-on: ubuntu-latest
         steps:
             - name: Ping
