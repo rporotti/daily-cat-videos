@@ -52,7 +52,7 @@ Then you just need to create an heroku app with:
 
 ```heroku create APP_NAME ```
 
-where ` HEROKU_APP`  will be the name of your app. In case you already have an app name, you can just run
+where ` APP_NAME`  will be the name of your app. In case you already have an app name, you can just run
 
 ```heroku git:remote -a APP_NAME ```
 
@@ -87,7 +87,7 @@ If everything worked correctely, your bot should be running on Heroku. You could
 
 ## AWS
 
-Why do we need AWS after all? Well, every time that the bot gets reset, we completely lose our info on the user who subscripted to our nice bot! In order to do so, we need to save the info somewhere, and this is where AWS S3 comes into play.
+Why do we need AWS after all? Well, every time that the bot gets reset, we completely lose our info on the user who subscribed to our nice bot! In order to do so, we need to save the info somewhere, and this is where AWS S3 comes into play.
 
 First, you need to create a free account on AWS. Then, generate an API key [here](https://console.aws.amazon.com/iam/home?region=eu-central-1#/security_credentials)
 
